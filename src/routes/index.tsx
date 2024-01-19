@@ -1,11 +1,11 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import CharacterContainer from "../pages/charactersContainer";
+import Characters from "../pages/characters";
 
 const router = createBrowserRouter([
-    { path: "/", element: <Navigate to="/" replace /> },
+    { path: "/", element: <Navigate to="/character" replace /> },
     {
       path: "/character",
-      element: <CharacterContainer />,
+      element: <Characters />,
     }
   ]);
   

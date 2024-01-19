@@ -7,7 +7,7 @@ const CharacterContainer = () => {
   const charactersDispatch = useCharactersDispatch();
 
   useEffect(() => {
-    // Fetch characters from the initial data instead of a server call.
+    
     fetchCharacters(charactersDispatch);
   }, [charactersDispatch]);
 
