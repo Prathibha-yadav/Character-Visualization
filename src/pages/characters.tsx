@@ -3,7 +3,7 @@ import CharacterContainer from "./charactersContainer";
 import CharactersList from "./CharactersList";
 import { useCharactersDispatch, useCharactersState } from "../context/characters/context";
 import { fetchCharacters } from "../context/characters/actions";
-
+import ErrorBoundary from "../components/ErrorBoundary";
 const Characters = () => {
   const dispatch = useCharactersDispatch();
   const { characters } = useCharactersState();
@@ -22,12 +22,13 @@ const Characters = () => {
         From The Rick and Morty API
       </h5>
     </div>
-
+    <ErrorBoundary>
       <Suspense fallback={<div className="suspense-loading">Loading...</div>}>
         <CharacterContainer />
-        {/* Keep the characters prop structure as it is */}
+        
         <CharactersList characters={characters} />
       </Suspense>
+      </ErrorBoundary>
     </>
   );
 };

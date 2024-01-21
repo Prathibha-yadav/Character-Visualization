@@ -11,7 +11,7 @@ const CharacterDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Ensure that id is a valid string before parsing
+        
         const characterId = typeof id === 'string' ? parseInt(id, 10) : undefined;
   
         if (characterId !== undefined) {

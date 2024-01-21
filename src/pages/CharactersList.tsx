@@ -11,8 +11,7 @@ interface CharactersListProps {
 
 const CharactersList: React.FC<CharactersListProps> = ({ characters }) => {
   if (!characters || !characters.results) {
-    console.error("Invalid characters data:", characters);
-    return <div>No characters found.</div>;
+    return <div>Loading...</div>;
   }
 
   const characterArray = Array.isArray(characters.results)
@@ -20,8 +19,7 @@ const CharactersList: React.FC<CharactersListProps> = ({ characters }) => {
     : characters.results.results || [];
 
   if (characterArray.length === 0) {
-    console.warn("No characters found.");
-    return <div>No characters found.</div>;
+    return <div>Loading...</div>;
   }
 
   return (
