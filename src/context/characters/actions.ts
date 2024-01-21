@@ -1,3 +1,4 @@
+// actions.ts
 import { API_ENDPOINT } from '../../config/constants';
 import { CharactersDispatch } from './reducer';
 
@@ -21,3 +22,4 @@ export const fetchCharacters = async (dispatch: CharactersDispatch) => {
     dispatch({ type: "FETCH_CHARACTERS_FAILURE", payload: 'Unable to load characters' });
   }
 };
+

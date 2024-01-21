@@ -1,5 +1,6 @@
 import { RouterProvider } from "react-router-dom"
 import { CharactersProvider } from "./context/characters/context"
+import { CharacterDetailsProvider } from "./context/character-details/context"
 import router from "./routes";
 function App() {
 
@@ -7,9 +8,9 @@ function App() {
       
       
       <CharactersProvider>
- 
+        <CharacterDetailsProvider>
       <RouterProvider router={router} />
-  
+      </CharacterDetailsProvider>
     </CharactersProvider>
       
   )
