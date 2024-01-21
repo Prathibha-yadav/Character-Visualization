@@ -1,30 +1,17 @@
-// CharactersList.tsx
 import React from "react";
 import { Link } from "react-router-dom";
-
-interface Character {
-  id: number;
-  name: string;
-  created: string;
-  episode: string[];
-  gender: string;
-  image: string;
-  location: {
-    name: string;
-    url: string;
-  };
-  origin: {
-    name: string;
-    url: string;
-  };
-  species: string;
-  status: string;
-  type: string;
-  url: string;
-}
+import { Character } from "../context/characters/reducer";
 
 interface CharactersListProps {
-  characters: { results: Character[] } | null;
+  characters: { 
+    info: { 
+      count: number; 
+      pages: number; 
+      next: string | null; 
+      prev: string | null; 
+    }; 
+    results: Character[]; 
+  } | null;
 }
 
 const CharactersList: React.FC<CharactersListProps> = ({ characters }) => {

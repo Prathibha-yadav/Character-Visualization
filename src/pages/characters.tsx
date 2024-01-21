@@ -1,9 +1,8 @@
 import { useEffect, Suspense } from "react";
 import CharacterContainer from "./charactersContainer";
 import CharactersList from "./CharactersList";
-import { useCharactersDispatch, useCharactersState} from "../context/characters/context";
+import { useCharactersDispatch, useCharactersState } from "../context/characters/context";
 import { fetchCharacters } from "../context/characters/actions";
-
 
 const Characters = () => {
   const dispatch = useCharactersDispatch();
@@ -20,13 +19,12 @@ const Characters = () => {
           Trending Characters
         </h2>
       </div>
-      
-      <Suspense fallback={<div className="suspense-loading">Loading...</div>}>
-  <CharacterContainer />
-  <CharactersList characters={characters } />
-</Suspense>
 
-      
+      <Suspense fallback={<div className="suspense-loading">Loading...</div>}>
+        <CharacterContainer />
+        {/* Keep the characters prop structure as it is */}
+        <CharactersList characters={characters.results} />
+      </Suspense>
     </>
   );
 };
