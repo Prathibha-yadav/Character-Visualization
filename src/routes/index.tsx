@@ -1,15 +1,16 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import Characters from "../pages/characters";
 import CharacterDetails from "../pages/character-details"; 
+import characters from "../pages/characters";
 
 const router = createBrowserRouter([
   { path: "/", element: <Navigate to="/character" replace /> },
   {
     path: "/character",
-    element: <Characters />,
+    element: <Characters/>,
   },
   {
-    path: "/character/:id", // Use a parameter in the route
+    path: "/character/:id", 
     element: <CharacterDetails />,
   },
 ]);

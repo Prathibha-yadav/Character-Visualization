@@ -28,13 +28,8 @@ interface CharactersListProps {
 }
 
 const CharactersList: React.FC<CharactersListProps> = ({ characters }) => {
-  if (!characters) {
+  if (!characters || !characters.results || !Array.isArray(characters.results)) {
     return <div>Loading...</div>;
-  }
-
-  if (!Array.isArray(characters.results)) {
-    console.error("Characters is not an array:", characters.results);
-    return null;
   }
 
   return (
@@ -50,7 +45,7 @@ const CharactersList: React.FC<CharactersListProps> = ({ characters }) => {
             <p className="text-lg font-semibold">{character.name}</p>
             <p>ID: {character.id}</p>
             <p>Gender: {character.gender}</p>
-            <p>Location: {character.location.name}</p>
+            <p>Location: {character.location?.name}</p>
             <p>Species: {character.species}</p>
             <p>Status: {character.status}</p>
           </div>

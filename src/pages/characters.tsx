@@ -4,6 +4,7 @@ import CharactersList from "./CharactersList";
 import { useCharactersDispatch, useCharactersState} from "../context/characters/context";
 import { fetchCharacters } from "../context/characters/actions";
 
+
 const Characters = () => {
   const dispatch = useCharactersDispatch();
   const { characters } = useCharactersState();
@@ -18,13 +19,13 @@ const Characters = () => {
         <h2 className="text-2xl font-medium tracking-tight text-slate-700">
           Trending Characters
         </h2>
-        {/* <CharactersList/> */}
       </div>
       
-        <Suspense fallback={<div className="suspense-loading">Loading...</div>}>
-          <CharacterContainer />
-          <CharactersList characters={characters} />
-        </Suspense>
+      <Suspense fallback={<div className="suspense-loading">Loading...</div>}>
+  <CharacterContainer />
+  <CharactersList characters={characters } />
+</Suspense>
+
       
     </>
   );

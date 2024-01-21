@@ -15,6 +15,8 @@ export const fetchCharacters = async (dispatch: CharactersDispatch) => {
     }
 
     const data = await response.json();
+    const characters = data.results || null;
+    console.log(characters)
     console.log(data)
     dispatch({ type: "FETCH_CHARACTERS_SUCCESS", payload: data });
   } catch (error) {
