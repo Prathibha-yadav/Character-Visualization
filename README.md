@@ -41,4 +41,10 @@ The application is designed to meet specific requirements, providing a seamless 
 
 - Implemented error handling for scenarios like failed API requests or unexpected data.
 
+<img width="958" alt="img1" src="https://github.com/Prathibha-yadav/Character-Visualization/assets/126705101/adf2678a-032b-49a1-8a33-baeee7acb2c9">
 
+
+<img width="959" alt="img2" src="https://github.com/Prathibha-yadav/Character-Visualization/assets/126705101/534077c1-6b76-44cc-abbd-2793c9b3382a">
+
+
+<img width="957" alt="img3" src="https://github.com/Prathibha-yadav/Character-Visualization/assets/126705101/1e472fcc-54a4-4707-a1cd-a456a8a1b36f">
