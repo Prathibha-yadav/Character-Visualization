@@ -1,8 +1,44 @@
-# React + Vite
+# Character Visualization Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Deployed on Netlify : [Live Application Link](https://tourmaline-stroopwafel-b1e8b7.netlify.app/character)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
+
+Character Visualization Web Application, developed with the Rick and Morty API. Below, you'll find a brief overview of the project.
+
+### Tech Stack
+
+- **Frontend Framework:** React + Vite
+- **Backend:** Node.js (utilizing a public API)
+- **Additional Technologies:** TypeScript, Tailwind CSS
+
+### Project Structure
+
+The application is designed to meet specific requirements, providing a seamless user experience.
+
+### Features
+
+#### Character List Page
+
+- Displayed a visually appealing list of characters.
+- Thumbnails and names allow users to quickly identify their favorite characters.
+
+#### Character Details Page
+
+- Implemented a detailed view for each character.
+- Displayed essential information like name, image, and additional details from the Rick and Morty API.
+
+#### Responsiveness
+
+- Employed responsive design principles to ensure the application functions well across various devices and screen sizes.
+
+#### State Management
+
+- Utilized effective state management techniques to ensure efficient handling of data and UI updates.
+
+#### Error Handling
+
+- Implemented error handling for scenarios like failed API requests or unexpected data.
+
+
