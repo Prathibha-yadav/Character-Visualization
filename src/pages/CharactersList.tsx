@@ -3,17 +3,30 @@ import { Link } from "react-router-dom";
 import { Character } from "../context/characters/reducer";
 
 interface CharactersListProps {
-  characters: { info: { count: number; pages: number; next: string | null; prev: string | null }; results: Character[] };
+  characters: {
+    info: { count: number; pages: number; next: string | null; prev: string | null };
+    results?: Character[] | { info: any; results: Character[] };
+  };
 }
 
 const CharactersList: React.FC<CharactersListProps> = ({ characters }) => {
-  if (!characters || !characters.results || !Array.isArray(characters.results)) {
-    return <div>Loading...</div>;
+  if (!characters || !characters.results) {
+    console.error("Invalid characters data:", characters);
+    return <div>No characters found.</div>;
+  }
+
+  const characterArray = Array.isArray(characters.results)
+    ? characters.results
+    : characters.results.results || [];
+
+  if (characterArray.length === 0) {
+    console.warn("No characters found.");
+    return <div>No characters found.</div>;
   }
 
   return (
     <div className="container mx-auto my-8 grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-      {characters.results.map((character) => (
+      {characterArray.map((character) => (
         <Link key={character.id} to={`/character/${character.id}`}>
           <div className="bg-white shadow-md p-4 rounded-lg cursor-pointer transition transform hover:scale-105 duration-300">
             <img
