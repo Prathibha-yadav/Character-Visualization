@@ -3,15 +3,7 @@ import { Link } from "react-router-dom";
 import { Character } from "../context/characters/reducer";
 
 interface CharactersListProps {
-  characters: { 
-    info: { 
-      count: number; 
-      pages: number; 
-      next: string | null; 
-      prev: string | null; 
-    }; 
-    results: Character[]; 
-  } | null;
+  characters: { info: { count: number; pages: number; next: string | null; prev: string | null }; results: Character[] };
 }
 
 const CharactersList: React.FC<CharactersListProps> = ({ characters }) => {
